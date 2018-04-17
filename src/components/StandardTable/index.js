@@ -24,34 +24,34 @@ class StandardTable extends PureComponent {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    // clean state
-    if (nextProps.selectedRows.length === 0) {
-      const needTotalList = initTotalList(nextProps.columns);
-      this.setState({
-        selectedRowKeys: [],
-        needTotalList,
-      });
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   // clean state
+  //   if (nextProps.selectedRows.length === 0) {
+  //     const needTotalList = initTotalList(nextProps.columns);
+  //     this.setState({
+  //       selectedRowKeys: [],
+  //       needTotalList,
+  //     });
+  //   }
+  // }
 
-  handleRowSelectChange = (selectedRowKeys, selectedRows) => {
-    let needTotalList = [...this.state.needTotalList];
-    needTotalList = needTotalList.map(item => {
-      return {
-        ...item,
-        total: selectedRows.reduce((sum, val) => {
-          return sum + parseFloat(val[item.dataIndex], 10);
-        }, 0),
-      };
-    });
+  // handleRowSelectChange = (selectedRowKeys, selectedRows) => {
+  //   let needTotalList = [...this.state.needTotalList];
+  //   needTotalList = needTotalList.map(item => {
+  //     return {
+  //       ...item,
+  //       total: selectedRows.reduce((sum, val) => {
+  //         return sum + parseFloat(val[item.dataIndex], 10);
+  //       }, 0),
+  //     };
+  //   });
 
-    if (this.props.onSelectRow) {
-      this.props.onSelectRow(selectedRows);
-    }
+  //   if (this.props.onSelectRow) {
+  //     this.props.onSelectRow(selectedRows);
+  //   }
 
-    this.setState({ selectedRowKeys, needTotalList });
-  };
+  //   this.setState({ selectedRowKeys, needTotalList });
+  // };
 
   handleTableChange = (pagination, filters, sorter) => {
     this.props.onChange(pagination, filters, sorter);
@@ -81,32 +81,10 @@ class StandardTable extends PureComponent {
 
     return (
       <div className={styles.standardTable}>
-        <div className={styles.tableAlert}>
-          <Alert
-            message={
-              <Fragment>
-                已选择 <a style={{ fontWeight: 600 }}>{selectedRowKeys.length}</a> 项&nbsp;&nbsp;
-                {needTotalList.map(item => (
-                  <span style={{ marginLeft: 8 }} key={item.dataIndex}>
-                    {item.title}总计&nbsp;
-                    <span style={{ fontWeight: 600 }}>
-                      {item.render ? item.render(item.total) : item.total}
-                    </span>
-                  </span>
-                ))}
-                <a onClick={this.cleanSelectedKeys} style={{ marginLeft: 24 }}>
-                  清空
-                </a>
-              </Fragment>
-            }
-            type="info"
-            showIcon
-          />
-        </div>
         <Table
           loading={loading}
           rowKey={rowKey || 'key'}
-          rowSelection={rowSelection}
+          // rowSelection={rowSelection}
           dataSource={list}
           columns={columns}
           pagination={paginationProps}

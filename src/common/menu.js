@@ -20,6 +20,18 @@ const menuData = [
         // hideInBreadcrumb: true,
         // hideInMenu: true,
       },
+      {
+        name: '每日目标',
+        path: 'daily-goal',
+      },
+      {
+        name: '中期目标',
+        path: 'month-goal',
+      },
+      {
+        name: '年度目标',
+        path: 'year-goal',
+      }
     ],
   },
   {
@@ -39,6 +51,18 @@ const menuData = [
         name: '高级表单',
         authority: 'admin',
         path: 'advanced-form',
+      },
+      {
+        name: '日进度',
+        path: 'day-progress',
+      },
+      {
+        name: '月进度',
+        path: 'month-progress',
+      },
+      {
+        name: '年进度',
+        path: 'year-progress',
       },
     ],
   },
@@ -77,6 +101,10 @@ const menuData = [
           },
         ],
       },
+      {
+        name: '个人详情',
+        path: 'personal',
+      },
     ],
   },
   {
@@ -92,6 +120,10 @@ const menuData = [
         name: '高级详情页',
         path: 'advanced',
         authority: 'admin',
+      },
+      {
+        name: '讨论',
+        path: 'discuss',
       },
     ],
   },

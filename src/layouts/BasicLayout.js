@@ -114,9 +114,9 @@ class BasicLayout extends React.PureComponent {
   getPageTitle() {
     const { routerData, location } = this.props;
     const { pathname } = location;
-    let title = 'Ant Design Pro';
+    let title = 'goal management';
     if (routerData[pathname] && routerData[pathname].name) {
-      title = `${routerData[pathname].name} - Ant Design Pro`;
+      title = `${routerData[pathname].name} - goal management`;
     }
     return title;
   }
@@ -236,25 +236,25 @@ class BasicLayout extends React.PureComponent {
                 {
                   key: '目标管理 首页',
                   title: '目标管理 首页',
-                  href: 'http://pro.ant.design',
-                  blankTarget: true,
+                  href: '#',
+                  blankTarget: false,
                 },
                 {
                   key: 'github',
                   title: <Icon type="github" />,
-                  href: 'https://github.com/ant-design/ant-design-pro',
+                  href: 'https://github.com/LeeDou',
                   blankTarget: true,
                 },
                 {
-                  key: 'Ant Design',
-                  title: 'Ant Design',
-                  href: 'http://ant.design',
+                  key: 'kant lee',
+                  title: 'kant lee',
+                  href: 'https://leedou.github.io/',
                   blankTarget: true,
                 },
               ]}
               copyright={
                 <Fragment>
-                  Copyright <Icon type="copyright" /> 2018 蚂蚁金服体验技术部出品
+                  Copyright <Icon type="copyright" /> 2018 极客网络工作室李康
                 </Fragment>
               }
             />

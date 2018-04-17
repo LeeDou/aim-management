@@ -109,7 +109,7 @@ export default class GlobalHeader extends PureComponent {
               console.log('enter', value); // eslint-disable-line
             }}
           />
-          <Tooltip title="使用文档">
+          {/* <Tooltip title="使用文档">
             <a
               target="_blank"
               href="http://pro.ant.design/docs/getting-started"
@@ -118,8 +118,8 @@ export default class GlobalHeader extends PureComponent {
             >
               <Icon type="question-circle-o" />
             </a>
-          </Tooltip>
-          <NoticeIcon
+          </Tooltip> */}
+          {/* <NoticeIcon
             className={styles.action}
             count={currentUser.notifyCount}
             onItemClick={(item, tabProps) => {
@@ -129,8 +129,8 @@ export default class GlobalHeader extends PureComponent {
             onPopupVisibleChange={onNoticeVisibleChange}
             loading={fetchingNotices}
             popupAlign={{ offset: [20, -16] }}
-          >
-            <NoticeIcon.Tab
+          > */}
+            {/* <NoticeIcon.Tab
               list={noticeData['通知']}
               title="通知"
               emptyText="你已查看所有通知"
@@ -148,7 +148,7 @@ export default class GlobalHeader extends PureComponent {
               emptyText="你已完成所有待办"
               emptyImage="https://gw.alipayobjects.com/zos/rmsportal/HsIsxMZiWKrNUavQUXqx.svg"
             />
-          </NoticeIcon>
+          </NoticeIcon> */}
           {currentUser.name ? (
             <Dropdown overlay={menu}>
               <span className={`${styles.action} ${styles.account}`}>

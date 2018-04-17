@@ -72,6 +72,30 @@ export const getRouterData = app => {
     '/': {
       component: dynamicWrapper(app, ['user', 'login'], () => import('../layouts/BasicLayout')),
     },
+    '/dashboard/daily-goal':{
+      component: dynamicWrapper(app, ['rule'], () => import('../routes/Dashboard/DailyGoal')),
+    },
+    '/dashboard/month-goal':{
+      component: dynamicWrapper(app, ['rule'], () => import('../routes/Dashboard/MonthGoal')),
+    },
+    '/dashboard/year-goal':{
+      component: dynamicWrapper(app, ['rule'], () => import('../routes/Dashboard/YearGoal')),
+    },
+    '/form/day-progress': {
+      component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/DayProgress')),
+    },
+    '/form/month-progress': {
+      component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/MonthProgress')),
+    },
+    '/form/year-progress': {
+      component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/YearProgress')),
+    },
+    '/list/personal': {
+      component: dynamicWrapper(app, ['list'], () => import('../routes/List/Personal')),
+    },
+    '/profile/discuss': {
+      component: dynamicWrapper(app, ['profile'], () => import('../routes/Profile/Discuss')),
+    },
     '/dashboard/analysis': {
       component: dynamicWrapper(app, ['chart'], () => import('../routes/Dashboard/Analysis')),
     },
@@ -132,9 +156,7 @@ export const getRouterData = app => {
       component: dynamicWrapper(app, ['profile'], () => import('../routes/Profile/BasicProfile')),
     },
     '/profile/advanced': {
-      component: dynamicWrapper(app, ['profile'], () =>
-        import('../routes/Profile/AdvancedProfile')
-      ),
+      component: dynamicWrapper(app, ['profile'], () =>import('../routes/Profile/AdvancedProfile')),
     },
     '/result/success': {
       component: dynamicWrapper(app, [], () => import('../routes/Result/Success')),
