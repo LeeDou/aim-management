@@ -2,7 +2,7 @@ import { isUrl } from '../utils/utils';
 
 const menuData = [
   {
-    name: 'dashboard',
+    name: '目标列表',
     icon: 'dashboard',
     path: 'dashboard',
     children: [
@@ -23,7 +23,7 @@ const menuData = [
     ],
   },
   {
-    name: '表单页',
+    name: '完成进度',
     icon: 'form',
     path: 'form',
     children: [
@@ -43,7 +43,7 @@ const menuData = [
     ],
   },
   {
-    name: '列表页',
+    name: '个人信息',
     icon: 'table',
     path: 'list',
     children: [
@@ -80,7 +80,7 @@ const menuData = [
     ],
   },
   {
-    name: '详情页',
+    name: '讨论区',
     icon: 'profile',
     path: 'profile',
     children: [
